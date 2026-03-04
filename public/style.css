@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+h1 {
+    margin: 1em 0em 1em 0em;
+    text-align: center;
+}
+
+
+h2 {
+    margin-left: 0.6em;
+}
+
+
+.niks-gespaard-veldverkenner {
+    background-color: #BFF0FF;
+    margin-left: 1em;
+    margin-top: 0;
+    margin-right: 3em;
+    border-radius: 0.5em;
+    padding: 1.8em;
+    text-align: center;
+
+    .veldverkenner {
+        font-weight:bolder;
+    }
+}
+
+
+.bloemenveld-collectie {
+    margin-left: 1em;
+    display: flex;
+    gap: 0.5em;
+}
+
+
+.veld-nieuws {
+    display: flex;
+    gap: 0.5em;
+    margin-left: 1em;
+}
+
+
+.nieuws-berichten {
+    background-color: #FFD27F;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 0.5em;
+    padding: 1em;
+
+    h4 {
+        font-size: 1.3em;
+        margin-top: 0.6em;
+    }
+
+    div {
+        margin-left: 1em;
+
+        img {
+            border-radius: 0.5em;
+        }
+    }
+
+    .bloemendveld {
+        font-size: 0.8em;
+        display: inline-block;
+        padding: 0.5em;
+        border: 1.5px solid rgb(0, 0, 0);
+        border-radius: 1em;
+    }
+
+    .details {
+        font-size: 1em;
+        display: flex;
+        gap: 7em;
+
+    }
+}
+
+
+footer {
+    margin-top: 3em;
+    
+    li {
+        list-style-type: none;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 0;
+        margin: 0;
+        justify-items: center;
+    }
+}
+
