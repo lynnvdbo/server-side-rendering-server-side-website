@@ -80,9 +80,14 @@ app.get('/nieuws', async function (request, response) {
   console.log(tempDummyNews)
    // Render index.liquid uit de Views map
    // Geef hier eventueel data aan mee
-   response.render('nieuws.liquid')
    response.render('nieuws.liquid', {nieuws: tempDummyNews.data})
 })
+
+// !!!! dit zorgt ervoor dat het artikel die je aanklikt op de nieuwspagina het goede artikel verschijnt vanuit database !!!!  
+app.get('/nieuws/:id', async function (request, response) {
+  const nieuwsId = request.params.id
+  const artikel = tempDummyNews.data.find(item => item.id == nieuwsId)
+  response.render('artikel.liquid', { artikel: artikel })
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
