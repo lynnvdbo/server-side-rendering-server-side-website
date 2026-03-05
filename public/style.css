@@ -5,6 +5,20 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Sansita', sans-serif; 
+}
+
+
+:root {
+  --sierlint: #F8F39B;
+  --heuvel: #D4C8E2;
+  --voedseleiland: #B3D686;
+  --waterplandgebied: #02ADE6;
+  --donker-accent: #3C3C3C;
+  --wit: #FFFFFF;
+  --zwart: #000000;
+  --border-radius: 0.5em;
+  --label-radius: 2em;
 }
 
 
@@ -24,7 +38,7 @@ h2 {
     margin-left: 1em;
     margin-top: 0;
     margin-right: 3em;
-    border-radius: 0.5em;
+    border-radius: var(--border-radius);
     padding: 1.8em;
     text-align: center;
 
@@ -52,7 +66,7 @@ h2 {
     background-color: #FFD27F;
     margin-left: 1em;
     margin-right: 1em;
-    border-radius: 0.5em;
+    border-radius: var(--border-radius);
     padding: 1em;
 
     h4 {
@@ -64,7 +78,7 @@ h2 {
         margin-left: 1em;
 
         img {
-            border-radius: 0.5em;
+            border-radius: var(--border-radius);
         }
     }
 
@@ -73,7 +87,7 @@ h2 {
         display: inline-block;
         padding: 0.5em;
         border: 1.5px solid rgb(0, 0, 0);
-        border-radius: 1em;
+        border-radius: var(--label-radius);
     }
 
     .details {
@@ -115,7 +129,7 @@ h2 {
         text-decoration: none; 
         background-color: var(--sierlint);
         padding: 0.6em;
-        border-radius: 0.5em;
+        border-radius: var(--border-radius);
 
         &:hover {
             text-decoration: underline;
@@ -126,6 +140,7 @@ h2 {
 }
 
 
+/* https://codepen.io/kmuenster/pen/XWWeQGw */
 /* zoekbalk */
 .wrapper {
     margin: 2em 0em 2em 1em;
@@ -168,17 +183,31 @@ h2 {
     margin-left: 1em;
     margin-right: 1em;
 
+    a {
+        color: var(--zwart);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+        }
+    }
+
+
     h2 {
         font-size: 1em;
     }
 
     .nieuws-bericht {
         display: grid;
-        grid-template-columns: 160px 1fr;;
+        grid-template-columns: 180px 1fr;
+        margin: 1em 0em 1em 0em;
     }
 
     img {
-        border-radius: 0.5em;
+        border-radius: var(--border-radius);
         height: 130px;
         object-fit: cover;
         grid-row: 1 / 3; /* zorgt dat de afbeelding over 2 rijen is */
