@@ -35,7 +35,7 @@
     {% comment %} DUMMYDATA {% endcomment %}
         {% for newsItem in nieuws %}
             <article class="nieuws-bericht">
-                <img src="https://fdnd-agency.directus.app/assets/{{newsItem.image}}" alt="{{newsItem.title}}"></img>
+                <img src="https://fdnd-agency.directus.app/assets/{{newsItem.image}}" alt="{{newsItem.title}}">
                 <p class="label">Bloemendveld</p>
                 {% comment %} <a href="/nieuws/title">{{ newsItem.title }}</a> {% endcomment %}
                 <a href="/nieuws/{{ newsItem.id }}">{{ newsItem.title }}</a>
