@@ -5,6 +5,38 @@ import express from 'express'
 // Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from 'liquidjs';
 
+const tempDummyNews = {
+  "data": [
+    {
+      "id": 1,
+      "body": "De bloei ...",
+      "title": "Laatste kans om de nabloei te zien van de duizendblad",
+      "date": "2025-11-20",
+      "image": "ccc47447-c2db-441b-a18b-183ab5a0b280"
+    },
+    {
+      "id": 2,
+      "body": "De bloei teunis...",
+      "title": "De zadenknoppen van de teunisbloem zijn nu goed te zien",
+      "date": "2025-11-20",
+      "image": "ccc47447-c2db-441b-a18b-183ab5a0b280"
+    },
+    {
+      "id": 3,
+      "body": "De bloei 3...",
+      "title": "De zadenknoppen van de teunisbloem zijn nu goed te zien 3",
+      "date": "2025-11-20",
+      "image": "ccc47447-c2db-441b-a18b-183ab5a0b280"
+    },
+    {
+      "id": 4,
+      "body": "De bloei 4...",
+      "title": "De zadenknoppen van de teunisbloem zijn nu goed te zien 4",
+      "date": "2025-11-20",
+      "image": "ccc47447-c2db-441b-a18b-183ab5a0b280"
+    },
+  ]
+}
 
 console.log('Hieronder moet je waarschijnlijk nog wat veranderen')
 // Doe een fetch naar de data die je nodig hebt
@@ -43,11 +75,14 @@ app.get('/', async function (request, response) {
    response.render('index.liquid')
 })
 
-// !!!! route naar NIEUWS PAGINA !!!!  /)
+// !!!! route naar NIEUWS PAGINA !!!!  
 app.get('/nieuws', async function (request, response) {
+  console.log(tempDummyNews)
    // Render index.liquid uit de Views map
    // Geef hier eventueel data aan mee
    response.render('nieuws.liquid')
+   response.render('nieuws.liquid', {nieuws: tempDummyNews.data})
+})
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
