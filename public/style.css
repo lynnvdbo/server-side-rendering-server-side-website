@@ -186,12 +186,34 @@ h2 {
 
     .label {
         font-size: 0.8em;
-        display: inline-block;
-        padding: 0.4em 0.8em;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.2em 0.6em 0.2em 0.6em;
         border: 1.5px solid var(--zwart);
-        border-radius: 1em;
+        border-radius: var(--label-radius);
+        justify-self: start; /* zorgt ervoor dat de border om de tekst dezelfde lengte krijgt als de tekst */
     }
 }
+
+
+
+/* per artikel */
+.artikel {
+    margin-left: 1em;
+    margin-right: 1em;
+
+    h1 {
+        font-size: 1.5em;
+        text-align: left;
+    }
+
+    img {
+        border-radius: var(--border-radius);
+        object-fit: cover;
+    }
+}
+
 
 
 footer {
@@ -203,7 +225,6 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-
 
         &:hover {
             text-decoration: underline;
