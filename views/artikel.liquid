@@ -13,14 +13,14 @@
         <img src="https://fdnd-agency.directus.app/assets/{{ artikel.image }}" alt="{{ artikel.title }}" width="342" height="300"> 
 
         {% comment %} hebben de datum nog niet in de database, dus voor nu even statisch {% endcomment %}
-        {% comment %} <p>{{ artikel.data }}</p>  {% endcomment %}
-        <p>Geplaatst: 20-11-2025</p> 
+        <p>Geplaatst op: {{ artikel.date }}</p> 
+        {% comment %} <p>Geplaatst: 20-11-2025</p>  {% endcomment %}
 
         <h1>{{ artikel.title }}</h1>
 
         {% comment %} hebben de beschrijving nog niet in de database, dus voor nu even statisch {% endcomment %}
-        {% comment %} <p>{{ artikel.content }}</p>  {% endcomment %}
-        <p>De bloei van duizendblad is bijna voorbij, maar de plant is nog goed te zien. De bloemen zijn aan het opdrogen en blijven nog even zichtbaar. Dit is een laatste moment om te zien hoe duizendblad eruitziet na de bloei, voordat de bloemen niet meer zichtbaar zijn. Wat wel mooi zichtbaar blijft zijn de mooie bladeren.</p>
+       <p>{{ artikel.body }}</p>  
+        {% comment %} <p>De bloei van duizendblad is bijna voorbij, maar de plant is nog goed te zien. De bloemen zijn aan het opdrogen en blijven nog even zichtbaar. Dit is een laatste moment om te zien hoe duizendblad eruitziet na de bloei, voordat de bloemen niet meer zichtbaar zijn. Wat wel mooi zichtbaar blijft zijn de mooie bladeren.</p> {% endcomment %}
 
     </article>
 
