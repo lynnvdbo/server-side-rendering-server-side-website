@@ -79,6 +79,14 @@ app.get('/', async function (request, response) {
    response.render('index.liquid')
 })
 
+// !!!! route naar VELDVERKENNER PAGINA !!!!  
+app.get('/veldverkenner', async function (request, response) {
+  console.log(tempDummyNews)
+   // Render index.liquid uit de Views map
+   // Geef hier eventueel data aan mee
+   response.render('veldverkenner.liquid', {nieuws: tempDummyNews.data})
+})
+
 // !!!! route naar NIEUWS PAGINA !!!!  
 app.get('/nieuws', async function (request, response) {
   console.log(tempDummyNews)
