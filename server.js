@@ -103,6 +103,14 @@ app.get('/nieuws/:slug', async function (request, response) {
   response.render('artikel.liquid', { artikel: artikel })
 })
 
+// !!!! route naar COLLECTIE PAGINA !!!!  
+app.get('/collectie', async function (request, response) {
+  console.log(tempDummyNews)
+   // Render index.liquid uit de Views map
+   // Geef hier eventueel data aan mee
+   response.render('collectie.liquid', {nieuws: tempDummyNews.data})
+})
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
 app.post('/', async function (request, response) {
