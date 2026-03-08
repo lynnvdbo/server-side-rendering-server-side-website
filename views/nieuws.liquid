@@ -1,6 +1,6 @@
 {% render 'partials/head.liquid' %}
 
- <main>
+ <main class="nieuws">
 
     <div class="terug-knop">
         <a href="/"><img src="/assets/pijltje-terug.svg" width="20" alt="pijltje terug">Terug</a>
@@ -38,7 +38,7 @@
                 <img src="https://fdnd-agency.directus.app/assets/{{newsItem.image}}" alt="{{newsItem.title}}">
                 <p class="label">Bloemendveld</p>
                 {% comment %} <a href="/nieuws/title">{{ newsItem.title }}</a> {% endcomment %}
-                <a href="/nieuws/{{ newsItem.id }}">{{ newsItem.title }}</a>
+                <a href="/nieuws/{{ newsItem.slug }}">{{ newsItem.title }}</a>
             </article>
 
             <hr>
