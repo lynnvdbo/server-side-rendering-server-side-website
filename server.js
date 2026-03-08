@@ -6,35 +6,39 @@ import express from 'express'
 import { Liquid } from 'liquidjs';
 
 const tempDummyNews = {
-  "data": [
+  data: [
     {
-      "id": 1,
-      "body": "De bloei ...",
-      "title": "Laatste kans om de nabloei te zien van de duizendblad",
-      "date": "2025-11-20",
-      "image": "ccc47447-c2db-441b-a18b-183ab5a0b280"
+      id: 1,
+      slug: "laatste-kans-nabloei-duizendblad",
+      title: "Laatste kans om de nabloei te zien van de duizendblad",
+      body: "De bloei van duizendblad is bijna voorbij, maar de plant is nog goed te zien. De bloemen zijn aan het opdrogen en blijven nog even zichtbaar. Dit is een laatste moment om te zien hoe duizendblad eruitziet na de bloei, voordat de bloemen niet meer zichtbaar zijn. Wat wel mooi zichtbaar blijft zijn de mooie bladeren.",
+      date: "2025-11-20",
+      image: "ccc47447-c2db-441b-a18b-183ab5a0b280"
     },
     {
-      "id": 2,
-      "body": "De bloei teunis...",
-      "title": "De zadenknoppen van de teunisbloem zijn nu goed te zien",
-      "date": "2025-11-20",
-      "image": "ccc47447-c2db-441b-a18b-183ab5a0b280"
+      id: 2,
+      slug: "zadenknoppen-teunisbloem",
+      title: "De zadenknoppen van de teunisbloem zijn nu goed te zien",
+      body: "De bloei van duizendblad is bijna voorbij, maar de plant is nog goed te zien. De bloemen zijn aan het opdrogen en blijven nog even zichtbaar. Dit is een laatste moment om te zien hoe duizendblad eruitziet na de bloei, voordat de bloemen niet meer zichtbaar zijn. Wat wel mooi zichtbaar blijft zijn de mooie bladeren.",
+      date: "2025-11-20",
+      image: "ccc47447-c2db-441b-a18b-183ab5a0b280"
     },
     {
-      "id": 3,
-      "body": "De bloei 3...",
-      "title": "De zadenknoppen van de teunisbloem zijn nu goed te zien 3",
-      "date": "2025-11-20",
-      "image": "ccc47447-c2db-441b-a18b-183ab5a0b280"
+      id: 3,
+      slug: "teunisbloem-zaden-3",
+      title: "De zadenknoppen van de teunisbloem zijn nu goed te zien 3",
+      body: "De bloei van duizendblad is bijna voorbij, maar de plant is nog goed te zien. De bloemen zijn aan het opdrogen en blijven nog even zichtbaar. Dit is een laatste moment om te zien hoe duizendblad eruitziet na de bloei, voordat de bloemen niet meer zichtbaar zijn. Wat wel mooi zichtbaar blijft zijn de mooie bladeren.",
+      date: "2025-11-20",
+      image: "ccc47447-c2db-441b-a18b-183ab5a0b280"
     },
     {
-      "id": 4,
-      "body": "De bloei 4...",
-      "title": "De zadenknoppen van de teunisbloem zijn nu goed te zien 4",
-      "date": "2025-11-20",
-      "image": "ccc47447-c2db-441b-a18b-183ab5a0b280"
-    },
+      id: 4,
+      slug: "teunisbloem-zaden-4",
+      title: "De zadenknoppen van de teunisbloem zijn nu goed te zien 4",
+      body: "De bloei van duizendblad is bijna voorbij, maar de plant is nog goed te zien. De bloemen zijn aan het opdrogen en blijven nog even zichtbaar. Dit is een laatste moment om te zien hoe duizendblad eruitziet na de bloei, voordat de bloemen niet meer zichtbaar zijn. Wat wel mooi zichtbaar blijft zijn de mooie bladeren.",
+      date: "2025-11-20",
+      image: "ccc47447-c2db-441b-a18b-183ab5a0b280"
+    }
   ]
 }
 
