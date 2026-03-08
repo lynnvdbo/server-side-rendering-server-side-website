@@ -88,9 +88,10 @@ app.get('/nieuws', async function (request, response) {
 })
 
 // !!!! dit zorgt ervoor dat het artikel die je aanklikt op de nieuwspagina het goede artikel verschijnt vanuit database !!!!  
-app.get('/nieuws/:id', async function (request, response) {
-  const nieuwsId = request.params.id
-  const artikel = tempDummyNews.data.find(item => item.id == nieuwsId)
+app.get('/nieuws/:slug', async function (request, response) {
+  const nieuwSlug = request.params.slug
+  const artikel = tempDummyNews.data.find(item => item.slug === nieuwSlug)
+
   response.render('artikel.liquid', { artikel: artikel })
 })
 
