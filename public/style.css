@@ -247,11 +247,10 @@ main.home {
 }
 
 
-
-/* per artikel */
-.artikel {
-    margin-left: 1em;
-    margin-right: 1em;
+main.artikel {
+    article {
+        margin-left: 1em;
+        margin-right: 1em;
 
     h1 {
         font-size: 1.5em;
@@ -264,8 +263,8 @@ main.home {
         aspect-ratio: 1/1;
         width: 100%;
     }
+    }
 }
-
 
 
 footer {
