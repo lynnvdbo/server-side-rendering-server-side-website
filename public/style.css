@@ -41,6 +41,8 @@ main {
     margin-bottom: 5em;
 }
 
+
+/* --------- HOME PAGINA */
 main.home {
 
     /* Section met collectie */
@@ -247,6 +249,7 @@ main.home {
 }
 
 
+/* --------- ARTIKEL PAGINA */
 main.artikel {
     article {
         margin-left: 1em;
@@ -267,6 +270,64 @@ main.artikel {
 }
 
 
+/* --------- COLLECTIE PAGINA */
+main.collectie {
+    article {
+        margin-left: 1em;
+        margin-right: 1em;
+        border-radius: var(--border-radius);
+
+        p {
+            margin: 1em;
+        }
+
+        a {
+            display: inline-block; /* gebruikt 100% van de beschikbare breedte */
+            /*  display: inline-block; wordt alleen zo breed als de inhoud */
+            margin: 0.4em 1em 1em 1em;
+            color: var(--wit);
+            text-decoration: none;
+            background-color: var(--donker-accent);
+            padding: 1em 6em 1em 6em;
+            border-radius: var(--border-radius);
+            border: 1.5px solid var(--donker-accent);
+            width: max-content; /* dit zorgt dat de tekst niet onder elkaar gaat schuiven */
+
+        }
+    }
+
+
+    article:nth-of-type(1) {
+        background-color: var(--heuvel);
+        margin-bottom: 2em;
+
+        a:hover {
+                background-color: var(--heuvel);
+                border: 1.5px solid var(--donker-accent);
+                color: var(--donker-accent);
+        }
+    }
+
+    article:nth-of-type(2) {
+        background-color: var(--voedseleiland);
+        margin-bottom: 7em;
+
+        a:hover {
+                background-color: var(--voedseleiland);
+                border: 1.5px solid var(--donker-accent);
+                color: var(--donker-accent);
+        }
+    }
+
+    .afbeelding {
+            object-fit: cover;
+            padding: 1em;
+            border-radius: 20px;
+        }
+    }
+
+
+/* --------- NAVBAR */
 footer {
     display: flex;
     align-items: center;
