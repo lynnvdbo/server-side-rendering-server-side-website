@@ -79,6 +79,7 @@ app.get('/', async function (request, response) {
    response.render('index.liquid')
 })
 
+
 // !!!! route naar VELDVERKENNER PAGINA !!!!  
 app.get('/veldverkenner', async function (request, response) {
   console.log(tempDummyNews)
@@ -89,16 +90,28 @@ app.get('/veldverkenner', async function (request, response) {
 
 // !!!! route naar NIEUWS PAGINA !!!!  
 app.get('/nieuws', async function (request, response) {
-  console.log(tempDummyNews)
-   // Render index.liquid uit de Views map
-   // Geef hier eventueel data aan mee
-   response.render('nieuws.liquid', {nieuws: tempDummyNews.data})
-})
+    // console.log(tempDummyNews)
+    // Render index.liquid uit de Views map
+    // deze code hieronder haalt data uit database op
+    const res = await fetch('https://fdnd-agency.directus.app/items/frankendael_news');
+    const result = await res.json();
+
+    response.render('nieuws.liquid', {
+      news: result.data
+    });
+   })
 
 // !!!! dit zorgt ervoor dat het artikel die je aanklikt op de nieuwspagina het goede artikel verschijnt vanuit database !!!!  
 app.get('/nieuws/:slug', async function (request, response) {
-  const nieuwSlug = request.params.slug
-  const artikel = tempDummyNews.data.find(item => item.slug === nieuwSlug)
+    // const artikel = tempDummyNews.data.find(item => item.slug === nieuwSlug)
+    // deze code hieronder haalt data uit database op
+    const res = await fetch('https://fdnd-agency.directus.app/items/frankendael_news/?filter[slug]=' + request.params.slug);
+    const result = await res.json();
+
+    response.render('artikel.liquid', {
+      news: result.data
+    });
+  })
 
   response.render('artikel.liquid', { artikel: artikel })
 })
