@@ -88,6 +88,7 @@ app.get('/veldverkenner', async function (request, response) {
    response.render('veldverkenner.liquid', {nieuws: tempDummyNews.data})
 })
 
+
 // !!!! route naar NIEUWS PAGINA !!!!  
 app.get('/nieuws', async function (request, response) {
     // console.log(tempDummyNews)
@@ -113,8 +114,6 @@ app.get('/nieuws/:slug', async function (request, response) {
     });
   })
 
-  response.render('artikel.liquid', { artikel: artikel })
-})
 
 // !!!! route naar COLLECTIE PAGINA !!!!  
 app.get('/collectie', async function (request, response) {
