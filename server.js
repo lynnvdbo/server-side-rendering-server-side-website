@@ -123,6 +123,26 @@ app.get('/collectie', async function (request, response) {
    response.render('collectie.liquid', {nieuws: tempDummyNews.data})
 })
 
+// !!!! route naar COLLECTIE NADEBLOEI PAGINA !!!!  
+app.get('/nadebloei', async function (request, response) {
+  console.log(tempDummyNews)
+   // Render index.liquid uit de Views map
+   // Geef hier eventueel data aan mee
+   response.render('nadebloei.liquid', {nieuws: tempDummyNews.data})
+})
+
+// !!!! route naar COLLECTIE INDEBLOEI PAGINA !!!!  
+app.get('/indebloei', async function (request, response) {
+  console.log(tempDummyNews)
+   // Render index.liquid uit de Views map
+   // Geef hier eventueel data aan mee
+   response.render('indebloei.liquid', {nieuws: tempDummyNews.data})
+})
+
+
+
+
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
 app.post('/', async function (request, response) {
