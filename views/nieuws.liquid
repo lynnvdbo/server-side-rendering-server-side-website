@@ -33,16 +33,19 @@
     <div class="alle-nieuws"> 
 
     {% comment %} DUMMYDATA {% endcomment %}
-        {% for newsItem in nieuws %}
+         {% for news in news %}
             <article class="nieuws-bericht">
-                <img src="https://fdnd-agency.directus.app/assets/{{newsItem.image}}" alt="{{newsItem.title}}">
+                <img src="https://fdnd-agency.directus.app/assets/{{news.image}}" alt="{{news.title}}">
                 <p class="label">Bloemendveld</p>
-                {% comment %} <a href="/nieuws/title">{{ newsItem.title }}</a> {% endcomment %}
-                <a href="/nieuws/{{ newsItem.slug }}">{{ newsItem.title }}</a>
+                <a href="/nieuws/{{ news.slug }}">{{ news.title }}</a>
             </article>
 
             <hr>
-        {% endfor %}
+        {% endfor %} 
+
+
+
+
 
     </div> 
  </main>
