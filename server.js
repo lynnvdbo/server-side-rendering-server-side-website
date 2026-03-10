@@ -129,7 +129,9 @@ app.listen(app.get('port'), function () {
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
 
-// 404 error pagina
+// !!!!  404 error pagina !!!! 
 app.use((req, res, next) => {
   res.status(404).render("error.liquid")
 })
+
+
